@@ -47,7 +47,7 @@ where dept.deptno=emp.deptno;
 
 
 -- 9. Display the position at which the string ‘AR’ occurs in the ename.
-select ename from emp where ename like '%AR%';
+select ename,position('AR' in ename) as First_occ_AR from emp ;
  -- 10. Display the HRA for each employee given that HRA is 20% of SAL.
 
 select ename,sal*0.20 "HRA" from emp;
